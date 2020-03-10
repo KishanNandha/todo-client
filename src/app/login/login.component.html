@@ -1,0 +1,45 @@
+
+
+<div class="container" >
+
+  <br/>
+  <br/>
+
+  <div  *ngIf='invalidLogin' class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Oh snap!</strong> 
+    {{errorMessage}}
+  </div>
+
+ <br/>
+
+
+    <div class="card border-primary mb-3"  style="max-width: 20rem;">
+      <div class="card-header ">Login!!</div>
+      <div class="card-body">
+       
+    <div class="card-text">
+      <table>
+        <tr>
+          <td>Username</td>
+          <td><input type="text" name="username" [(ngModel)]="username"></td>
+        </tr>
+        <tr>
+          <td>Password </td>
+          <td><input type="password" name="password" [(ngModel)]="password"></td>
+        </tr>
+        <tr>
+          <td>
+            <button (click)=handleLogin() class="btn btn-success">Login</button>
+          </td>
+        </tr>
+      </table>
+      <!-- User Name : {{username}} -->
+  
+      
+    </div>
+
+      </div>
+    </div>
+
+</div>
